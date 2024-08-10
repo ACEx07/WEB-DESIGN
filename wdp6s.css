@@ -1,0 +1,125 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pricing-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
+}
+
+/* Unique gradient backgrounds */
+.pricing-card:nth-child(1) {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.pricing-card:nth-child(2) {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.pricing-card:nth-child(3) {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.pricing-card:nth-child(4) {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.pricing-card:nth-child(5) {
+    background: linear-gradient(135deg, #e1eec3, #f05053);
+}
+
+/* Title with background */
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.pricing-card h3:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Price styling */
+.pricing-card .price {
+    font-size: 36px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.pricing-card .price:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button styling */
+.pricing-card .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.pricing-card .button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.pricing-card .button:focus {
+    outline: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
